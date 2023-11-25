@@ -1,0 +1,24 @@
+{
+  "name": "generic_framework",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:clean-reports": "rmdir /s /q cypress\\reports",
+    "testUI": "npm run cy:clean-reports && cypress run --spec cypress/e2e/LoginTests/Login.cy.js --browser chrome --headed",
+    "testApi": "npm run cy:clean-reports && cypress run --spec cypress/e2e/ApiTests/apiTest.cy.js --browser chrome",
+    "test":"npm run cy:clean-reports && cypress run "
+  },
+  "author": "Vishal Jha",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "cypress": "^12.17.4",
+    "cypress-mochawesome-reporter": "^3.6.0"
+  },
+  "dependencies": {
+    "cypress-file-upload": "^5.0.8",
+    "moment": "^2.29.4",
+    "neat-csv": "^5.2.0"
+  }
+}
