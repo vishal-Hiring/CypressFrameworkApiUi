@@ -37,10 +37,9 @@ Before you begin, ensure you have met the following requirements:
 ## Project Structure
 cypress/
   ├── fixtures/            # Test data files
-  ├── integration/         # Test scripts
-  ├── plugins/             # Cypress plugins
+  ├── e2e/                 # Test scripts
   ├── support/             # Custom commands and utilities & Pages
-  └── ...
+  └── reports/             # Reports 
 ## Running Tests
  Execute all tests in Headless Mode:
  ``npx cypress run
