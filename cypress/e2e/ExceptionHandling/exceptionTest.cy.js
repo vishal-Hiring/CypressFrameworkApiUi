@@ -1,7 +1,7 @@
 import Exception from "../../support/Pages/Exception/testExceptions.page";
 const ex = new Exception();
 
-describe('Test Suite To Test All Negative And Positive Test',()=>{
+describe('Test Suite For Exception Handling',()=>{
     let creds;
     before(()=>{
         cy.fixture('testData.json').then((data) => {
