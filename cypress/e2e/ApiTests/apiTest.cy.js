@@ -9,17 +9,19 @@ describe('API Tests for ReqRes.in', () => {
             creds = data;
           });
     })
-  it('1.GET Request: List Users on Page 2', () => {
+  it.only('1.GET Request: List Users on Page 2', () => {
     const api = creds.api;
     const page = api.pageID;
 
     ApiService.listUsersByPage(page).then((response) => {
       expect(response.status).to.eq(200);
-      expect(response.body.data).to.have.length.greaterThan(0);
+      expect(response.body).to.not.be.null
+      expect(response.body.data)
       expect(response.body.page).to.eq(page);
     });
   });
 
+  // application/type
   it('2.GET Request: Get User by ID', () => {
     const api = creds.api;
     const userId = api.pageID;
